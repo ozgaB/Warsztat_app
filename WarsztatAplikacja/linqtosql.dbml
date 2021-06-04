@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Warsztat" Class="linqtosqlDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=BARTOSZ-OZGA-PC;Initial Catalog=Warsztat;Integrated Security=True" SettingsObjectName="WarsztatAplikacja.Properties.Settings" SettingsPropertyName="WarsztatConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.UzytkownicyAplikacji" Member="UzytkownicyAplikacji">
+    <Type Name="UzytkownicyAplikacji">
+      <Column Name="Login" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.czesci" Member="czesci">
+    <Type Name="czesci">
+      <Column Name="id_czesci" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nazwa_czesci" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nr_czesci" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="id_dostawcy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Data_dostawy" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Ilosc_w_magazynie" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.klienci" Member="klienci">
+    <Type Name="klienci">
+      <Column Name="id_klient" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Imie" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nazwisko" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Data_pierwszej_wizyty" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Nazwa_firmy" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Nip" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SelectLogin" Method="SelectLogin">
+    <Parameter Name="Par_Login" Parameter="par_Login" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SelectLoginResult">
+      <Column Name="Login" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SelectLogin2" Method="SelectLogin2">
+    <ElementType Name="SelectLogin2Result">
+      <Column Name="Login" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.czesci_wybór" Method="czesci_wybór">
+    <Parameter Name="Par_id_czesci" Parameter="par_id_czesci" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Par_Nazwa_czesci" Parameter="par_Nazwa_czesci" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Par_Nr_czesci" Parameter="par_Nr_czesci" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Par_id_dostawcy" Parameter="par_id_dostawcy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Par_Data_dostawy" Parameter="par_Data_dostawy" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Par_Ilosc_w_magazynie" Parameter="par_Ilosc_w_magazynie" Type="System.String" DbType="NChar(10)" />
+    <ElementType Name="czesci_wybórResult">
+      <Column Name="id_czesci" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nazwa_czesci" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nr_czesci" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="id_dostawcy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Data_dostawy" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Ilosc_w_magazynie" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_czesci" Method="select_czesci">
+    <ElementType Name="select_czesciResult">
+      <Column Name="id_czesci" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nazwa_czesci" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nr_czesci" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="id_dostawcy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Data_dostawy" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Ilosc_w_magazynie" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_dostawcy" Method="select_dostawcy">
+    <ElementType Name="select_dostawcyResult">
+      <Column Name="id_dostawcy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Kraj" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_naprawy" Method="select_naprawy">
+    <ElementType Name="select_naprawyResult">
+      <Column Name="id_naprawy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_samochodu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Data_naprawy" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="id_czesci" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_mechanika" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_koszt_naprawy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_raport_naprawy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_samochody" Method="select_samochody">
+    <ElementType Name="select_samochodyResult">
+      <Column Name="id_samochodu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Marka" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DataSerwisu" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id_klienta" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nrVIN" Type="System.String" DbType="NChar(17)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_klienci_kontakt" Method="select_klienci_kontakt">
+    <ElementType Name="select_klienci_kontaktResult">
+      <Column Name="id_klienta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Miasto" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Kod_pocztowy" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Ulica" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Nr" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Kontakt_telefon" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Kontakt_email" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_dostawcy_kontakt" Method="select_dostawcy_kontakt">
+    <ElementType Name="select_dostawcy_kontaktResult">
+      <Column Name="id_dostawcy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Miasto" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Kod_pocztowy" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Ulica" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Nr" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Kontakt_telefon" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+      <Column Name="Kontakt_email" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_klienci" Method="select_klienci">
+    <ElementType Name="select_klienciResult">
+      <Column Name="id_klienta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Imie" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nazwisko" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Data_pierwszej_wizyty" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Nazwa_firmy" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Nip" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_dostawcy" Method="select_dostawcy1">
+    <ElementType Name="select_dostawcyResult1">
+      <Column Name="id_dostawcy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Kraj" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_czesci" Method="select_czesci1">
+    <ElementType Name="select_czesciResult1">
+      <Column Name="id_czesci" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nazwa_czesci" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nr_czesci" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="id_dostawcy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Data_dostawy" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Ilosc_w_magazynie" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.dostawcy_wstawianie" Method="dostawcy_wstawianie">
+    <Parameter Name="Par_id_dostawcy" Parameter="par_id_dostawcy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Par_Nazwa" Parameter="par_Nazwa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Par_Kraj" Parameter="par_Kraj" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.dostawcy_usuwanie" Method="dostawcy_usuwanie">
+    <Parameter Name="Par_id_dostawcy" Parameter="par_id_dostawcy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Par_Nazwa" Parameter="par_Nazwa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Par_Kraj" Parameter="par_Kraj" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.dostawcy_wstawianie" Method="dostawcy_wstawianie1">
+    <Parameter Name="Par_Nazwa" Parameter="par_Nazwa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Par_Kraj" Parameter="par_Kraj" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.dostawcy_usuwanie" Method="dostawcy_usuwanie1">
+    <Parameter Name="Par_id_dostawcy" Parameter="par_id_dostawcy" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.dostawcy_aktualizacja" Method="dostawcy_aktualizacja">
+    <Parameter Name="Par_id_dostawcy" Parameter="par_id_dostawcy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Par_Nazwa" Parameter="par_Nazwa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Par_Kraj" Parameter="par_Kraj" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.klienci_select_id_where_miasto" Method="klienci_select_id_where_miasto">
+    <Parameter Name="Par_Imie" Parameter="par_Imie" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="klienci_select_id_where_miastoResult">
+      <Column Name="id_klienta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.klienci_kontakt_wstawianie" Method="klienci_kontakt_wstawianie">
+    <Parameter Name="Par_Misto" Parameter="par_Misto" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Kod_pocztowy" Parameter="par_Kod_pocztowy" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Ulica" Parameter="par_Ulica" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Nr" Parameter="par_Nr" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Kontakt_telefon" Parameter="par_Kontakt_telefon" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Kontakt_email" Parameter="par_Kontakt_email" Type="System.String" DbType="Char(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.klienci_wstawianie" Method="klienci_wstawianie">
+    <Parameter Name="Par_Imie" Parameter="par_Imie" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Par_Nazwisko" Parameter="par_Nazwisko" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Par_Data_pierwszej_wizyty" Parameter="par_Data_pierwszej_wizyty" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Par_Nazwa_firmy" Parameter="par_Nazwa_firmy" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Nip" Parameter="par_Nip" Type="System.String" DbType="NChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.klienci_kontakt_wstawianie" Method="klienci_kontakt_wstawianie1">
+    <Parameter Name="Par_Misto" Parameter="par_Misto" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Kod_pocztowy" Parameter="par_Kod_pocztowy" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Ulica" Parameter="par_Ulica" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Nr" Parameter="par_Nr" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Kontakt_telefon" Parameter="par_Kontakt_telefon" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Kontakt_email" Parameter="par_Kontakt_email" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_id_klient" Parameter="par_id_klient" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.klienci_kontakt_wstawianie" Method="klienci_kontakt_wstawianie2">
+    <Parameter Name="Par_Misto" Parameter="par_Misto" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Kod_pocztowy" Parameter="par_Kod_pocztowy" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Ulica" Parameter="par_Ulica" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Nr" Parameter="par_Nr" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Kontakt_telefon" Parameter="par_Kontakt_telefon" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Kontakt_email" Parameter="par_Kontakt_email" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_id_klient" Parameter="par_id_klient" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.klienci_kontakt_wstawianie" Method="klienci_kontakt_wstawianie3">
+    <Parameter Name="Par_Misto" Parameter="par_Misto" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Kod_pocztowy" Parameter="par_Kod_pocztowy" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Ulica" Parameter="par_Ulica" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Nr" Parameter="par_Nr" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Kontakt_telefon" Parameter="par_Kontakt_telefon" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_Kontakt_email" Parameter="par_Kontakt_email" Type="System.String" DbType="Char(50)" />
+    <Parameter Name="Par_id_klient" Parameter="par_id_klient" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.klienci_select_id_where_miasto2" Method="klienci_select_id_where_miasto2">
+    <Parameter Name="Par_Imie" Parameter="par_Imie" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="klienci_select_id_where_miasto2Result">
+      <Column Name="id_klient" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.widok_wstawianie_rezultat" Method="widok_wstawianie_rezultat">
+    <ElementType Name="widok_wstawianie_rezultatResult">
+      <Column Name="Imie" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nazwisko" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Data_pierwszej_wizyty" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Nazwa_firmy" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Nip" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Miasto" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Kod_pocztowy" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Ulica" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Nr" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Kontakt_telefon" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Kontakt_email" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Opis" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.naprawy_raport_wstawianie" Method="naprawy_raport_wstawianie">
+    <Parameter Name="Par_Nr_raportu" Parameter="par_Nr_raportu" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Par_Opis" Parameter="par_Opis" Type="System.String" DbType="NChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.widok_wstawianie_rezultat" Method="widok_wstawianie_rezultat1">
+    <Parameter Name="Par_id" Parameter="par_id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="widok_wstawianie_rezultatResult1">
+      <Column Name="Imie" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nazwisko" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Data_pierwszej_wizyty" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Nazwa_firmy" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Nip" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Miasto" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Kod_pocztowy" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Ulica" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Nr" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Kontakt_telefon" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Kontakt_email" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Opis" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.naprawy_raport_wstawianie" Method="naprawy_raport_wstawianie1">
+    <Parameter Name="Par_Nr_raportu" Parameter="par_Nr_raportu" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Par_Opis" Parameter="par_Opis" Type="System.String" DbType="NChar(100)" />
+    <Parameter Name="Par_id_klient" Parameter="par_id_klient" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

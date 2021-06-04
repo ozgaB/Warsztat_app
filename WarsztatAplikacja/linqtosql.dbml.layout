@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="linqtosql">
+  <DataContextMoniker Name="/linqtosqlDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f3513e3a-f932-4849-98f3-2f0be71a1bc1" absoluteBounds="1.25, 0.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/linqtosqlDataContext/UzytkownicyAplikacji" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e90922a-be29-401f-9fd5-02c3f124b471" absoluteBounds="1.2649999999999997, 1.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="828ffbf0-0ea5-43f5-8995-e7e2db62e274" absoluteBounds="3.375, 0.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/linqtosqlDataContext/czesci" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3f1156c2-4504-4755-aa99-38e554f2fbee" absoluteBounds="3.3899999999999997, 1.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="76271102-97be-41fe-8915-fa0952285d92" absoluteBounds="5.875, 3.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/linqtosqlDataContext/klienci" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c8a39854-e0c0-4f66-bb5d-8b36a0476493" absoluteBounds="5.89, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

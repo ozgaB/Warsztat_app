@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C12EC57F-55E6-4B55-ABE8-6BA59093322A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WarsztatAplikacja</RootNamespace>
+    <AssemblyName>WarsztatAplikacja</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CzesciManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CzesciManager.Designer.cs">
+      <DependentUpon>CzesciManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DostawcyManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DostawcyManager.Designer.cs">
+      <DependentUpon>DostawcyManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KlientDaneKontaktowe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KlientDaneKontaktowe.Designer.cs">
+      <DependentUpon>KlientDaneKontaktowe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KlientRezultat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KlientRezultat.Designer.cs">
+      <DependentUpon>KlientRezultat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="linqtosql.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>linqtosql.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="NaprawyManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NaprawyManager.Designer.cs">
+      <DependentUpon>NaprawyManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelKlient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelKlient.Designer.cs">
+      <DependentUpon>PanelKlient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelPracownik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanelPracownik.Designer.cs">
+      <DependentUpon>PanelPracownik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pomoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pomoc.Designer.cs">
+      <DependentUpon>Pomoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SamochodyManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SamochodyManager.Designer.cs">
+      <DependentUpon>SamochodyManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZalogujPracownik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZalogujPracownik.Designer.cs">
+      <DependentUpon>ZalogujPracownik.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DostawcyManager.resx">
+      <DependentUpon>DostawcyManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KlientDaneKontaktowe.resx">
+      <DependentUpon>KlientDaneKontaktowe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KlientRezultat.resx">
+      <DependentUpon>KlientRezultat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NaprawyManager.resx">
+      <DependentUpon>NaprawyManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelKlient.resx">
+      <DependentUpon>PanelKlient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelPracownik.resx">
+      <DependentUpon>PanelPracownik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pomoc.resx">
+      <DependentUpon>Pomoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZalogujPracownik.resx">
+      <DependentUpon>ZalogujPracownik.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="linqtosql.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>linqtosql.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="linqtosql.dbml.layout">
+      <DependentUpon>linqtosql.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4014703-driver-mobile-phone-repair-screw-service-wrench_112878 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help_icon-icons.com_55891.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-arrow_icon-icons.com_72866 %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
