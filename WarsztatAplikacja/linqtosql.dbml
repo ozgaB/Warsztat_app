@@ -270,4 +270,21 @@
     <Parameter Name="Par_id_klient" Parameter="par_id_klient" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.widok_wstawianie_rezultat" Method="widok_wstawianie_rezultat2">
+    <Parameter Name="Par_id" Parameter="par_id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="widok_wstawianie_rezultatResult2">
+      <Column Name="Imie" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nazwisko" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Data_pierwszej_wizyty" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Nazwa_firmy" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Nip" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Miasto" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Kod_pocztowy" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Ulica" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Nr" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Kontakt_telefon" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Kontakt_email" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="Opis" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

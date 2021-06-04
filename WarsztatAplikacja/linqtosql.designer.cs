@@ -287,6 +287,13 @@ namespace WarsztatAplikacja
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), par_Nr_raportu, par_Opis, par_id_klient);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.widok_wstawianie_rezultat")]
+		public ISingleResult<widok_wstawianie_rezultatResult2> widok_wstawianie_rezultat2([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_id", DbType="Int")] System.Nullable<int> par_id)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), par_id);
+			return ((ISingleResult<widok_wstawianie_rezultatResult2>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.UzytkownicyAplikacji")]
@@ -2160,6 +2167,230 @@ namespace WarsztatAplikacja
 		private string _Opis;
 		
 		public widok_wstawianie_rezultatResult1()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Imie", DbType="VarChar(50)")]
+		public string Imie
+		{
+			get
+			{
+				return this._Imie;
+			}
+			set
+			{
+				if ((this._Imie != value))
+				{
+					this._Imie = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nazwisko", DbType="VarChar(50)")]
+		public string Nazwisko
+		{
+			get
+			{
+				return this._Nazwisko;
+			}
+			set
+			{
+				if ((this._Nazwisko != value))
+				{
+					this._Nazwisko = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Data_pierwszej_wizyty", DbType="Date")]
+		public System.Nullable<System.DateTime> Data_pierwszej_wizyty
+		{
+			get
+			{
+				return this._Data_pierwszej_wizyty;
+			}
+			set
+			{
+				if ((this._Data_pierwszej_wizyty != value))
+				{
+					this._Data_pierwszej_wizyty = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nazwa_firmy", DbType="Char(50)")]
+		public string Nazwa_firmy
+		{
+			get
+			{
+				return this._Nazwa_firmy;
+			}
+			set
+			{
+				if ((this._Nazwa_firmy != value))
+				{
+					this._Nazwa_firmy = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nip", DbType="NChar(10)")]
+		public string Nip
+		{
+			get
+			{
+				return this._Nip;
+			}
+			set
+			{
+				if ((this._Nip != value))
+				{
+					this._Nip = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Miasto", DbType="Char(50)")]
+		public string Miasto
+		{
+			get
+			{
+				return this._Miasto;
+			}
+			set
+			{
+				if ((this._Miasto != value))
+				{
+					this._Miasto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Kod_pocztowy", DbType="Char(50)")]
+		public string Kod_pocztowy
+		{
+			get
+			{
+				return this._Kod_pocztowy;
+			}
+			set
+			{
+				if ((this._Kod_pocztowy != value))
+				{
+					this._Kod_pocztowy = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ulica", DbType="Char(50)")]
+		public string Ulica
+		{
+			get
+			{
+				return this._Ulica;
+			}
+			set
+			{
+				if ((this._Ulica != value))
+				{
+					this._Ulica = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nr", DbType="Char(50)")]
+		public string Nr
+		{
+			get
+			{
+				return this._Nr;
+			}
+			set
+			{
+				if ((this._Nr != value))
+				{
+					this._Nr = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Kontakt_telefon", DbType="Char(50)")]
+		public string Kontakt_telefon
+		{
+			get
+			{
+				return this._Kontakt_telefon;
+			}
+			set
+			{
+				if ((this._Kontakt_telefon != value))
+				{
+					this._Kontakt_telefon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Kontakt_email", DbType="Char(50)")]
+		public string Kontakt_email
+		{
+			get
+			{
+				return this._Kontakt_email;
+			}
+			set
+			{
+				if ((this._Kontakt_email != value))
+				{
+					this._Kontakt_email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Opis", DbType="NChar(100)")]
+		public string Opis
+		{
+			get
+			{
+				return this._Opis;
+			}
+			set
+			{
+				if ((this._Opis != value))
+				{
+					this._Opis = value;
+				}
+			}
+		}
+	}
+	
+	public partial class widok_wstawianie_rezultatResult2
+	{
+		
+		private string _Imie;
+		
+		private string _Nazwisko;
+		
+		private System.Nullable<System.DateTime> _Data_pierwszej_wizyty;
+		
+		private string _Nazwa_firmy;
+		
+		private string _Nip;
+		
+		private string _Miasto;
+		
+		private string _Kod_pocztowy;
+		
+		private string _Ulica;
+		
+		private string _Nr;
+		
+		private string _Kontakt_telefon;
+		
+		private string _Kontakt_email;
+		
+		private string _Opis;
+		
+		public widok_wstawianie_rezultatResult2()
 		{
 		}
 		

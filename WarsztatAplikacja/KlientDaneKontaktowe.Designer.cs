@@ -179,6 +179,7 @@ namespace WarsztatAplikacja
             this.button2.Size = new System.Drawing.Size(41, 33);
             this.button2.TabIndex = 9;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // KlientDaneKontaktowe
             // 
