@@ -16,3 +16,7 @@ C:\Users\sqidi\source\repos\WarsztatAplikacja\WarsztatAplikacja\obj\Debug\Warszt
 C:\Users\sqidi\source\repos\WarsztatAplikacja\WarsztatAplikacja\obj\Debug\WarsztatAplikacja.PanelKlient.resources
 C:\Users\sqidi\source\repos\WarsztatAplikacja\WarsztatAplikacja\obj\Debug\WarsztatAplikacja.KlientDaneKontaktowe.resources
 C:\Users\sqidi\source\repos\WarsztatAplikacja\WarsztatAplikacja\obj\Debug\WarsztatAplikacja.KlientRezultat.resources
+C:\Users\sqidi\source\repos\WarsztatAplikacja\WarsztatAplikacja\obj\Debug\WarsztatAplikacja.CzesciManager.resources
+C:\Users\sqidi\source\repos\WarsztatAplikacja\WarsztatAplikacja\obj\Debug\WarsztatAplikacja.SamochodyManager.resources
+C:\Users\sqidi\source\repos\WarsztatAplikacja\WarsztatAplikacja\obj\Debug\WarsztatAplikacja.PodgladDostawcy.resources
+C:\Users\sqidi\source\repos\WarsztatAplikacja\WarsztatAplikacja\obj\Debug\WarsztatAplikacja.PodgladKlienci.resources

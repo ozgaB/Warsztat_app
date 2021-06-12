@@ -25,7 +25,16 @@ namespace WarsztatAplikacja
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            //naprawy raporty
+            this.Close();
+            th = new Thread(OpenNaprawyManager);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void OpenNaprawyManager()
+        {
+            Application.Run(new NaprawyManager());
+
         }
 
         private void usuńNaprawęToolStripMenuItem_Click(object sender, EventArgs e)
@@ -81,11 +90,29 @@ namespace WarsztatAplikacja
 
         private void samochodyToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Close();
+            th = new Thread(OpenSamochodyManager);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void OpenSamochodyManager()
+        {
+            Application.Run(new SamochodyManager());
 
         }
 
         private void częściToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Close();
+            th = new Thread(OpenCzesciManager);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void OpenCzesciManager()
+        {
+            Application.Run(new CzesciManager());
 
         }
 

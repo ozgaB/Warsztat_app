@@ -294,6 +294,13 @@ namespace WarsztatAplikacja
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), par_id);
 			return ((ISingleResult<widok_wstawianie_rezultatResult2>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.klienci_wstawianie")]
+		public int klienci_wstawianie1([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Imie", DbType="VarChar(50)")] string par_Imie, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Nazwisko", DbType="VarChar(50)")] string par_Nazwisko, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Data_pierwszej_wizyty", DbType="Date")] System.Nullable<System.DateTime> par_Data_pierwszej_wizyty, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Nazwa_firmy", DbType="VarChar(50)")] string par_Nazwa_firmy, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Nip", DbType="VarChar(50)")] string par_Nip)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), par_Imie, par_Nazwisko, par_Data_pierwszej_wizyty, par_Nazwa_firmy, par_Nip);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.UzytkownicyAplikacji")]

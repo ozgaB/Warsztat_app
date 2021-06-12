@@ -94,6 +94,18 @@
     <Compile Include="PanelPracownik.Designer.cs">
       <DependentUpon>PanelPracownik.cs</DependentUpon>
     </Compile>
+    <Compile Include="PodgladDostawcy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PodgladDostawcy.Designer.cs">
+      <DependentUpon>PodgladDostawcy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PodgladKlienci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PodgladKlienci.Designer.cs">
+      <DependentUpon>PodgladKlienci.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pomoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +132,9 @@
     <Compile Include="ZalogujPracownik.Designer.cs">
       <DependentUpon>ZalogujPracownik.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CzesciManager.resx">
+      <DependentUpon>CzesciManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DostawcyManager.resx">
       <DependentUpon>DostawcyManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +153,12 @@
     <EmbeddedResource Include="PanelPracownik.resx">
       <DependentUpon>PanelPracownik.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PodgladDostawcy.resx">
+      <DependentUpon>PodgladDostawcy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PodgladKlienci.resx">
+      <DependentUpon>PodgladKlienci.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pomoc.resx">
       <DependentUpon>Pomoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +172,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SamochodyManager.resx">
+      <DependentUpon>SamochodyManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Start.resx">
       <DependentUpon>Start.cs</DependentUpon>
     </EmbeddedResource>

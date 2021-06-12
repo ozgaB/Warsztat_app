@@ -48,6 +48,7 @@ namespace WarsztatAplikacja
             string kod = textBox4.Text;
             string tel = textBox5.Text;
             string email = textBox6.Text;
+            
             if(((string.IsNullOrEmpty(imie))&&(string.IsNullOrEmpty(Nazwisko))) || ((string.IsNullOrEmpty(Firma))&&(string.IsNullOrEmpty(Nip))))
             {
                 MessageBox.Show("Dane osobowe prywatne lub Dane firmy nie mogą być puste");
@@ -96,7 +97,7 @@ namespace WarsztatAplikacja
 
             if (validation == 5)
             {
-                var klient = db.klienci_wstawianie(imie, Nazwisko, null, Firma, Nip);
+               var klient = db.klienci_wstawianie1(imie, Nazwisko, null, Firma, Nip);
                 var wyszukaj = (from s in db.klienci where s.Imie == imie select s.id_klient).First();
                 var kontakt = db.klienci_kontakt_wstawianie3(miasto, kod, ulica, nr, tel, email, wyszukaj);
                 var raport = db.naprawy_raport_wstawianie1(null, opis, wyszukaj);

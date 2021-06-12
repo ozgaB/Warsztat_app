@@ -287,4 +287,12 @@
       <Column Name="Opis" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.klienci_wstawianie" Method="klienci_wstawianie1">
+    <Parameter Name="Par_Imie" Parameter="par_Imie" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Par_Nazwisko" Parameter="par_Nazwisko" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Par_Data_pierwszej_wizyty" Parameter="par_Data_pierwszej_wizyty" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Par_Nazwa_firmy" Parameter="par_Nazwa_firmy" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Par_Nip" Parameter="par_Nip" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>
