@@ -40,7 +40,7 @@ namespace WarsztatAplikacja
 
         private void button3_Click(object sender, EventArgs e)
         {
-            var aktualizuj = db.dostawcy_aktualizacja(int.Parse(textBox1.Text),textBox2.Text,textBox3.Text);
+            var aktualizuj = db.dostawcy_aktualizacja1(int.Parse(textBox1.Text),textBox2.Text,textBox3.Text);
             MessageBox.Show("Zaktualizowałeś rekord o ID: " + textBox1.Text);
             reload();
         }

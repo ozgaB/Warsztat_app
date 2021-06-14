@@ -68,12 +68,12 @@ namespace WarsztatAplikacja
             string item = wybierztabele.SelectedItem.ToString();
             if (item == "Naprawy")
             {
-                var widok = db.select_naprawy();
+                var widok = db.naprawy_raport_wybór();
                 widoktabel.DataSource = widok;
             }
             if (item == "Części")
             {
-                var widok = db.select_czesci();
+                var widok = db.select_czesci2();
                 widoktabel.DataSource = widok;
             }
             if (item == "Dostawcy")
@@ -83,7 +83,7 @@ namespace WarsztatAplikacja
             }
             if (item == "Samochody")
             {
-                var widok = db.select_samochody();
+                var widok = db.select_samochody1();
                 widoktabel.DataSource = widok;
             }
         }

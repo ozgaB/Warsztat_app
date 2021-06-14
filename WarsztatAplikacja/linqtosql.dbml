@@ -295,4 +295,88 @@
     <Parameter Name="Par_Nip" Parameter="par_Nip" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.select_samochody" Method="select_samochody1">
+    <ElementType Name="select_samochodyResult1">
+      <Column Name="Marka" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nrVIN" Type="System.String" DbType="NChar(17)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.select_czesci" Method="select_czesci2">
+    <ElementType Name="select_czesciResult2">
+      <Column Name="Nazwa_czesci" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nr_czesci" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Ilosc_w_magazynie" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Data_dostawy" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.naprawy_raport_wybór" Method="naprawy_raport_wybór">
+    <ElementType Name="naprawy_raport_wybórResult">
+      <Column Name="id_raport_naprawy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nr_raportu" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Opis" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="id_klient" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.naprawy_raport_usuwanie" Method="naprawy_raport_usuwanie">
+    <Parameter Name="Par_id_raport_naprawy" Parameter="par_id_raport_naprawy" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.naprawy_raport_aktualizacja" Method="naprawy_raport_aktualizacja">
+    <Parameter Name="Par_id_raport_naprawy" Parameter="par_id_raport_naprawy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Par_Nr_raportu" Parameter="par_Nr_raportu" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Par_Opis" Parameter="par_Opis" Type="System.String" DbType="NChar(100)" />
+    <Parameter Name="Par_id_klient" Parameter="par_id_klient" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.naprawy_raport_aktualizacja" Method="naprawy_raport_aktualizacja1">
+    <Parameter Name="Par_id_raport_naprawy" Parameter="par_id_raport_naprawy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Par_Nr_raportu" Parameter="par_Nr_raportu" Type="System.String" DbType="Char(10)" />
+    <Parameter Name="Par_Opis" Parameter="par_Opis" Type="System.String" DbType="NChar(100)" />
+    <Parameter Name="Par_id_klient" Parameter="par_id_klient" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.czesci_wstawianie" Method="czesci_wstawianie">
+    <Parameter Name="Par_Nazwa_czesci" Parameter="par_Nazwa_czesci" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Par_Nr_czesci" Parameter="par_Nr_czesci" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="Par_id_dostawcy" Parameter="par_id_dostawcy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Par_Ilosc_w_magazynie" Parameter="par_Ilosc_w_magazynie" Type="System.String" DbType="NChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.czesci_usuwanie" Method="czesci_usuwanie">
+    <Parameter Name="Par_id_czesci" Parameter="par_id_czesci" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.samochody_wstawianie" Method="samochody_wstawianie">
+    <Parameter Name="Par_Marka" Parameter="par_Marka" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Par_Model" Parameter="par_Model" Type="System.String" DbType="NChar(100)" />
+    <Parameter Name="Par_DataSerwisu" Parameter="par_DataSerwisu" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Par_id_klienta" Parameter="par_id_klienta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Par_nrVIN" Parameter="par_nrVIN" Type="System.String" DbType="NChar(17)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.samochody_wstawianie" Method="samochody_wstawianie1">
+    <Parameter Name="Par_Marka" Parameter="par_Marka" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Par_Model" Parameter="par_Model" Type="System.String" DbType="NChar(100)" />
+    <Parameter Name="Par_id_klienta" Parameter="par_id_klienta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Par_nrVIN" Parameter="par_nrVIN" Type="System.String" DbType="NChar(17)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.samochody_usuwanie" Method="samochody_usuwanie">
+    <Parameter Name="Par_id_samochodu" Parameter="par_id_samochodu" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.select_czesci" Method="select_czesci3">
+    <ElementType Name="select_czesciResult3">
+      <Column Name="Nazwa_czesci" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Nr_czesci" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Ilosc_w_magazynie" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.dostawcy_aktualizacja" Method="dostawcy_aktualizacja1">
+    <Parameter Name="Par_id_dostawcy" Parameter="par_id_dostawcy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Par_Nazwa" Parameter="par_Nazwa" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Par_Kraj" Parameter="par_Kraj" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
 </Database>

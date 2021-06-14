@@ -301,6 +301,97 @@ namespace WarsztatAplikacja
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), par_Imie, par_Nazwisko, par_Data_pierwszej_wizyty, par_Nazwa_firmy, par_Nip);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.select_samochody")]
+		public ISingleResult<select_samochodyResult1> select_samochody1()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<select_samochodyResult1>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.select_czesci")]
+		public ISingleResult<select_czesciResult2> select_czesci2()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<select_czesciResult2>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.naprawy_raport_wybór")]
+		public ISingleResult<naprawy_raport_wybórResult> naprawy_raport_wybór()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<naprawy_raport_wybórResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.naprawy_raport_usuwanie")]
+		public int naprawy_raport_usuwanie([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_id_raport_naprawy", DbType="Int")] System.Nullable<int> par_id_raport_naprawy)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), par_id_raport_naprawy);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.naprawy_raport_aktualizacja")]
+		public int naprawy_raport_aktualizacja([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_id_raport_naprawy", DbType="Int")] System.Nullable<int> par_id_raport_naprawy, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Nr_raportu", DbType="Char(10)")] string par_Nr_raportu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Opis", DbType="NChar(100)")] string par_Opis, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_id_klient", DbType="Int")] System.Nullable<int> par_id_klient)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), par_id_raport_naprawy, par_Nr_raportu, par_Opis, par_id_klient);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.naprawy_raport_aktualizacja")]
+		public int naprawy_raport_aktualizacja1([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_id_raport_naprawy", DbType="Int")] System.Nullable<int> par_id_raport_naprawy, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Nr_raportu", DbType="Char(10)")] string par_Nr_raportu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Opis", DbType="NChar(100)")] string par_Opis, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_id_klient", DbType="Int")] System.Nullable<int> par_id_klient)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), par_id_raport_naprawy, par_Nr_raportu, par_Opis, par_id_klient);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.czesci_wstawianie")]
+		public int czesci_wstawianie([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Nazwa_czesci", DbType="VarChar(50)")] string par_Nazwa_czesci, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Nr_czesci", DbType="VarChar(15)")] string par_Nr_czesci, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_id_dostawcy", DbType="Int")] System.Nullable<int> par_id_dostawcy, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Ilosc_w_magazynie", DbType="NChar(10)")] string par_Ilosc_w_magazynie)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), par_Nazwa_czesci, par_Nr_czesci, par_id_dostawcy, par_Ilosc_w_magazynie);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.czesci_usuwanie")]
+		public int czesci_usuwanie([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_id_czesci", DbType="Int")] System.Nullable<int> par_id_czesci)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), par_id_czesci);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.samochody_wstawianie")]
+		public int samochody_wstawianie([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Marka", DbType="VarChar(50)")] string par_Marka, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Model", DbType="NChar(100)")] string par_Model, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_DataSerwisu", DbType="DateTime")] System.Nullable<System.DateTime> par_DataSerwisu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_id_klienta", DbType="Int")] System.Nullable<int> par_id_klienta, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_nrVIN", DbType="NChar(17)")] string par_nrVIN)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), par_Marka, par_Model, par_DataSerwisu, par_id_klienta, par_nrVIN);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.samochody_wstawianie")]
+		public int samochody_wstawianie1([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Marka", DbType="VarChar(50)")] string par_Marka, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Model", DbType="NChar(100)")] string par_Model, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_id_klienta", DbType="Int")] System.Nullable<int> par_id_klienta, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_nrVIN", DbType="NChar(17)")] string par_nrVIN)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), par_Marka, par_Model, par_id_klienta, par_nrVIN);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.samochody_usuwanie")]
+		public int samochody_usuwanie([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_id_samochodu", DbType="Int")] System.Nullable<int> par_id_samochodu)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), par_id_samochodu);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.select_czesci")]
+		public ISingleResult<select_czesciResult3> select_czesci3()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<select_czesciResult3>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.dostawcy_aktualizacja")]
+		public int dostawcy_aktualizacja1([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_id_dostawcy", DbType="Int")] System.Nullable<int> par_id_dostawcy, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Nazwa", DbType="VarChar(50)")] string par_Nazwa, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Par_Kraj", DbType="VarChar(50)")] string par_Kraj)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), par_id_dostawcy, par_Nazwa, par_Kraj);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.UzytkownicyAplikacji")]
@@ -2589,6 +2680,290 @@ namespace WarsztatAplikacja
 				if ((this._Opis != value))
 				{
 					this._Opis = value;
+				}
+			}
+		}
+	}
+	
+	public partial class select_samochodyResult1
+	{
+		
+		private string _Marka;
+		
+		private string _Model;
+		
+		private string _nrVIN;
+		
+		public select_samochodyResult1()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Marka", DbType="VarChar(50)")]
+		public string Marka
+		{
+			get
+			{
+				return this._Marka;
+			}
+			set
+			{
+				if ((this._Marka != value))
+				{
+					this._Marka = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Model", DbType="VarChar(50)")]
+		public string Model
+		{
+			get
+			{
+				return this._Model;
+			}
+			set
+			{
+				if ((this._Model != value))
+				{
+					this._Model = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nrVIN", DbType="NChar(17)")]
+		public string nrVIN
+		{
+			get
+			{
+				return this._nrVIN;
+			}
+			set
+			{
+				if ((this._nrVIN != value))
+				{
+					this._nrVIN = value;
+				}
+			}
+		}
+	}
+	
+	public partial class select_czesciResult2
+	{
+		
+		private string _Nazwa_czesci;
+		
+		private string _Nr_czesci;
+		
+		private string _Ilosc_w_magazynie;
+		
+		private System.Nullable<System.DateTime> _Data_dostawy;
+		
+		public select_czesciResult2()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nazwa_czesci", DbType="VarChar(50)")]
+		public string Nazwa_czesci
+		{
+			get
+			{
+				return this._Nazwa_czesci;
+			}
+			set
+			{
+				if ((this._Nazwa_czesci != value))
+				{
+					this._Nazwa_czesci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nr_czesci", DbType="VarChar(15)")]
+		public string Nr_czesci
+		{
+			get
+			{
+				return this._Nr_czesci;
+			}
+			set
+			{
+				if ((this._Nr_czesci != value))
+				{
+					this._Nr_czesci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ilosc_w_magazynie", DbType="NChar(10)")]
+		public string Ilosc_w_magazynie
+		{
+			get
+			{
+				return this._Ilosc_w_magazynie;
+			}
+			set
+			{
+				if ((this._Ilosc_w_magazynie != value))
+				{
+					this._Ilosc_w_magazynie = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Data_dostawy", DbType="Date")]
+		public System.Nullable<System.DateTime> Data_dostawy
+		{
+			get
+			{
+				return this._Data_dostawy;
+			}
+			set
+			{
+				if ((this._Data_dostawy != value))
+				{
+					this._Data_dostawy = value;
+				}
+			}
+		}
+	}
+	
+	public partial class naprawy_raport_wybórResult
+	{
+		
+		private int _id_raport_naprawy;
+		
+		private string _Nr_raportu;
+		
+		private string _Opis;
+		
+		private System.Nullable<int> _id_klient;
+		
+		public naprawy_raport_wybórResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_raport_naprawy", DbType="Int NOT NULL")]
+		public int id_raport_naprawy
+		{
+			get
+			{
+				return this._id_raport_naprawy;
+			}
+			set
+			{
+				if ((this._id_raport_naprawy != value))
+				{
+					this._id_raport_naprawy = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nr_raportu", DbType="Char(10)")]
+		public string Nr_raportu
+		{
+			get
+			{
+				return this._Nr_raportu;
+			}
+			set
+			{
+				if ((this._Nr_raportu != value))
+				{
+					this._Nr_raportu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Opis", DbType="NChar(100)")]
+		public string Opis
+		{
+			get
+			{
+				return this._Opis;
+			}
+			set
+			{
+				if ((this._Opis != value))
+				{
+					this._Opis = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_klient", DbType="Int")]
+		public System.Nullable<int> id_klient
+		{
+			get
+			{
+				return this._id_klient;
+			}
+			set
+			{
+				if ((this._id_klient != value))
+				{
+					this._id_klient = value;
+				}
+			}
+		}
+	}
+	
+	public partial class select_czesciResult3
+	{
+		
+		private string _Nazwa_czesci;
+		
+		private string _Nr_czesci;
+		
+		private string _Ilosc_w_magazynie;
+		
+		public select_czesciResult3()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nazwa_czesci", DbType="VarChar(50)")]
+		public string Nazwa_czesci
+		{
+			get
+			{
+				return this._Nazwa_czesci;
+			}
+			set
+			{
+				if ((this._Nazwa_czesci != value))
+				{
+					this._Nazwa_czesci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nr_czesci", DbType="VarChar(15)")]
+		public string Nr_czesci
+		{
+			get
+			{
+				return this._Nr_czesci;
+			}
+			set
+			{
+				if ((this._Nr_czesci != value))
+				{
+					this._Nr_czesci = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ilosc_w_magazynie", DbType="NChar(10)")]
+		public string Ilosc_w_magazynie
+		{
+			get
+			{
+				return this._Ilosc_w_magazynie;
+			}
+			set
+			{
+				if ((this._Ilosc_w_magazynie != value))
+				{
+					this._Ilosc_w_magazynie = value;
 				}
 			}
 		}

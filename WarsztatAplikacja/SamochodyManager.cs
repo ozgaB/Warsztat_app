@@ -45,5 +45,32 @@ namespace WarsztatAplikacja
             PodgladKlienci p = new PodgladKlienci();
             p.Show();
         }
+
+        private void SamochodyManager_Load(object sender, EventArgs e)
+        {
+            reload();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int count = Convert.ToInt32(numericUpDown1.Value);
+            var wstawianie = db.samochody_wstawianie1(textBox2.Text, textBox3.Text, count, textBox5.Text);
+            MessageBox.Show("Dodałeś nowy rekord");
+            reload();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int count = Convert.ToInt32(textBox1.Text);
+            var wstawianie = db.samochody_usuwanie(count);
+            MessageBox.Show("Usunąłeś nowy rekord");
+            reload();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Zaktualizowałeś nowy rekord");
+            reload();
+        }
     }
 }

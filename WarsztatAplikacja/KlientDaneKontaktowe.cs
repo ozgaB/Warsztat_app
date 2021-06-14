@@ -49,11 +49,11 @@ namespace WarsztatAplikacja
             string tel = textBox5.Text;
             string email = textBox6.Text;
             
-            if(((string.IsNullOrEmpty(imie))&&(string.IsNullOrEmpty(Nazwisko))) || ((string.IsNullOrEmpty(Firma))&&(string.IsNullOrEmpty(Nip))))
+         //   if(((string.IsNullOrEmpty(imie))&&(string.IsNullOrEmpty(Nazwisko))) || ((string.IsNullOrEmpty(Firma))&&(string.IsNullOrEmpty(Nip))))
             {
-                MessageBox.Show("Dane osobowe prywatne lub Dane firmy nie mogą być puste");
+          //      MessageBox.Show("Dane osobowe prywatne lub Dane firmy nie mogą być puste");
             }
-            else
+         //   else
             {
                 validation += 1;
             }
